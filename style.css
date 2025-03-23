@@ -8,15 +8,16 @@ body {
 
 #chat-container {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 400px;
-    height: 600px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
+    bottom: 20px;   /* Distance from the bottom of the screen */
+    left: 20px;     /* Distance from the left of the screen */
+    width: 90%;     /* Width of the chat container */
+    max-height: 80%; /* Limit the height of the chat container */
+    overflow-y: auto; /* Enable scrolling for messages */
+    font-family: Arial, sans-serif; /* Optional: Change font style */
+    color: white;    /* Chat text color */
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
     padding: 10px;
-    overflow-y: auto;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+    border-radius: 10px;
 }
 
 #star-background {
@@ -32,8 +33,9 @@ body {
 .chat-message {
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
-    padding: 10px;
-    margin: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc;  /* Optional: Add a line between messages */
     border-radius: 8px;
     font-size: 16px;
     animation: fadeInUp 2s ease-out, floatUp 6s ease-in-out infinite;
