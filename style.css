@@ -8,17 +8,35 @@ body {
 
 #chat-container {
     position: absolute;
-    bottom: 20px;   /* Distance from the bottom of the screen */
-    left: 20px;     /* Distance from the left of the screen */
-    width: 90%;     /* Width of the chat container */
+    bottom: 20px; /* Distance from the bottom of the screen */
+    left: 20px;   /* Distance from the left of the screen */
+    width: 90%;   /* Width of the chat container */
     max-height: 80%; /* Limit the height of the chat container */
-    overflow-y: auto; /* Enable scrolling for messages */
-    font-family: Arial, sans-serif; /* Optional: Change font style */
-    color: white;    /* Chat text color */
+    overflow-y: scroll; /* Allow scrolling */
+    scrollbar-width: thin; /* Optional: Make the scrollbar thinner */
+    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0); /* Optional: Style the scrollbar */
+    font-family: Arial, sans-serif;
+    color: white;
     background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
     padding: 10px;
     border-radius: 10px;
 }
+
+/* Hide the default scrollbar in Webkit-based browsers (Chrome, Safari) */
+#chat-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+#chat-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);  /* Thumb color */
+    border-radius: 10px;
+}
+
+#chat-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);  /* Track color */
+}
+
 
 #star-background {
     position: absolute;
