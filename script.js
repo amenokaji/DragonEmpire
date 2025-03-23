@@ -2,9 +2,9 @@ const chatContainer = document.getElementById("chat-container");
 const ws = new WebSocket("wss://irc-ws.chat.twitch.tv");
 
 ws.onopen = () => {
-    ws.send("PASS oauth:your_oauth_token");  // Replace with your OAuth token
-    ws.send("NICK your_twitch_username");   // Replace with your Twitch username
-    ws.send("JOIN #your_channel");          // Replace with your channel name
+    ws.send("PASS oauth:sj7k27nw4sk3oifvdyvfddtffqtv77");  // Replace with your OAuth token
+    ws.send("NICK AmeJouten");   // Replace with your Twitch username
+    ws.send("JOIN #AmeJouten");          // Replace with your channel name
 };
 
 ws.onmessage = (event) => {
