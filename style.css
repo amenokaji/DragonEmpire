@@ -44,9 +44,10 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('stars.png'); /* You can use a PNG image of stars */
+    background: url('https://imgur.com/Dr24C3H'); /* Replace with the new image URL */
     animation: starrySky 60s linear infinite;
 }
+
 
 .chat-message {
     background: rgba(0, 0, 0, 0.7);
