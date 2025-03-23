@@ -19,7 +19,17 @@ function displayChatMessage(message) {
     const messageElement = document.createElement("div");
     messageElement.classList.add("chat-message");
     messageElement.innerText = message;
+
+    // Add message to the container
     chatContainer.appendChild(messageElement);
 
-    setTimeout(() => messageElement.remove(), 15000);  // Remove messages after 15 seconds
+    // Remove message after 15 seconds
+    setTimeout(() => messageElement.remove(), 15000);
+
+    // Optional: Limit the number of messages displayed at once
+    const maxMessages = 10; // Adjust as needed
+    const messages = chatContainer.getElementsByClassName("chat-message");
+    if (messages.length > maxMessages) {
+        messages[0].remove(); // Remove the first message if the container exceeds the max number of messages
+    }
 }
